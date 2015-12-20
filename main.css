@@ -1,0 +1,139 @@
+@font-face{
+    font-family: 'Texta';
+    src: url(fonts/Texta.dfont);
+}
+
+@font-face{
+    font-family:'Dolce Vita';
+    src: url(fonts/DolceVita.dfont);
+}
+
+body{
+    color: !important#2B251E;
+    background-color: #fff;
+    background-image: url(img/zentangle.jpg);
+    font-family: Texta;
+    font-size: 16px;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+    padding-right: 15%;
+    margin: 10px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar-default .navbar-nav>li>a:last-child {
+    margin-right: 10px;
+}
+
+
+.popUP{
+    position:absolute;
+    z-index: 2000;
+    width: 100%;
+    height: auto;
+    padding: 70px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.popUP>img{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popUP>h3{
+    text-align: center;
+}
+
+footer{
+    background-color: #856A5D;
+    text-align: center;
+    width: 100%;
+    height: 130px;
+}
+
+form{
+    width: 100%;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: 10px;
+    font-size: 50px;
+    font-family: "Dolce Vita";
+}
+
+.imgGallery
+{
+    float: left;
+    margin-bottom:25px;
+}
+
+.h1, h1 {
+    font-size: 30px;
+    font-family: "Dolce Vita";
+}
+
+#socialButtons{
+    width: 25%;
+    margin: 0 auto;
+}
+
+.gallery{
+    background-image: !none;
+}
+
+img {
+    vertical-align: middle;
+    padding: 30px;
+    background-color: #fff;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.pull-right {
+    float: right;
+    margin-top: -40px;
+}
+
+.boxThing {
+    background-color: white;
+    z-index: 1000;
+    display: block;
+    color: black;
+    text-align: center;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 7px;
+    padding-right: 7px;
+}

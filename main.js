@@ -24,22 +24,22 @@ angular.module('myApp').config(function($routeProvider) {
         })
 });
 
-angular.module('myApp').service('galleryService', function(){
-    this.imageArray = [
-        { name: 'Leaflet', src: 'img/Leaflet.jpg', description: ['leaf, black, white, pattern']},
-        { name: 'blueFloral', src: 'img/blueFloral.jpg', description: ['leaf, blue, color, flower']},
-        { name: 'random', src: 'img/random.jpg', description: ['random, dots, black, white']},
-        { name: 'Unknown', src: 'img/unknown.jpg', description: ['random, dots, black, white']},
-        { name: 'leaf', src: 'img/leaf.gif', description: ['leaf, black, white']},
-        { name: 'forest', src: 'img/forest.jpg' , description: ['leaf, forest, black, white, color, landscape']},
-        { name: 'foresty', src: 'img/foresty.jpg' , description: ['flower, green, forest, color']},
-        { name: 'Summer Leaves', src:'img/Summer-Leaves.jpg', description: ['leaf, color']}
-    ];
+angular.module('myApp').service('galleryService', function($http, $q){
+    var deferred = $q.defer();
+    $http.get('main.json').then(function(data){
+        deferred.resolve(data);
+    });
+    this.getArray = function(){
+        return deferred.promise;
+    }
 });
 
 angular.module('myApp').controller('galleryControl', ['$scope', 'galleryService', function($scope, galleryService){
-    $scope.imageArray = galleryService.imageArray;
-
+    var promise = galleryService.getArray();
+    promise.then(function(data){
+        $scope.imgArray = data.data;
+        console.log($scope.imgArray);
+    });
 }]);
 
 angular.module('myApp').controller('submitControl', ['$scope', 'galleryService', function($scope, galleryService){

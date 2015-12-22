@@ -10,28 +10,15 @@
     </div>
 </form>
 
-<div class="gallery" ng-repeat="item in imageArray | filter: setFilter">
-    <!-- add a feature where if you click on the image it'll open a module-->
+<div class="gallery" ng-repeat="item in imgArray | filter: setFilter">
     <div class="col-md-3 col-sm-4 col-xs-5" >
         <a ng-click="hiddenPopUp=true"><img ng-src={{item.src}} ALT="{{item.name}}" WIDTH=275 HEIGHT=275>
         </a>
     </div>
     <div ng-show="hiddenPopUp" class="ng-show popUP" ng-click="hiddenPopUp=false">
-        <div id="socialButtons"><a href="https://www.pinterest.com/pin/create/button/
-        ?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F
-        &media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg
-        &description=Next%20stop%3A%20Pinterest"
-                                   data-pin-do="buttonPin"
-                                   data-pin-config="above">
-            <img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" />
-        </a>
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="zentange">Tweet</a>
-            <a href="mailto:?subject=Twitter Gets More Shoppable With Product Pages And Collections&amp;body=Article:%20http://techcrunch.com/2015/06/19/twitter-product-pages-and-collections/" rel="external" class="email icon-email"></a>
-        </div>
         <img ng-src={{item.src}} ALT="{{item.name}}">
         <p>Image Tags: </p>
-        <p ng-repeat="i in item.description">{{i}}</p>
+        <li ng-repeat="i in item.description">{{i}}</li>
 
     </div>
 </div>

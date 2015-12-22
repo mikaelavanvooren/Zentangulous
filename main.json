@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Leaflet",
+    "src": "img/Leaflet.jpg",
+    "description": ["leaf", "black", "white", "pattern"]},
+  {
+    "name": "blueFloral",
+    "src": "img/blueFloral.jpg",
+    "description": ["leaf", "blue", "color", "flower"]},
+  {
+    "name": "random",
+    "src": "img/random.jpg",
+    "description": ["random", "dots", "black", "white"]},
+  {
+    "name": "Unknown",
+    "src": "img/unknown.jpg",
+    "description": ["random", "dots", "black", "white"]},
+  {
+    "name": "leaf",
+    "src": "img/leaf.gif",
+    "description": ["leaf", "black", "white"]},
+  {
+    "name": "forest",
+    "src": "img/forest.jpg" ,
+    "description": ["leaf", "forest", "black", "white", "color", "landscape"]},
+  {
+    "name": "foresty",
+    "src": "img/foresty.jpg" ,
+    "description": ["flower", "green", "forest", "color"]},
+  {
+    "name": "Summer Leaves",
+    "src": "img/Summer-Leaves.jpg",
+    "description": ["leaf", "color"]
+  }
+]
